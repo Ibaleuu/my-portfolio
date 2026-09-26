@@ -1,0 +1,63 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  role      String   @default("admin")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  category    String
+  tech        String[] // Array of technologies
+  imageUrl    String?
+  githubUrl   String?
+  demoUrl     String?
+  featured    Boolean  @default(false)
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Contact {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  subject   String
+  message   String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model Profile {
+  id        String   @id @default(cuid())
+  fullName  String
+  title     String   @default("Full-Stack Developer")
+  bio       String
+  location  String
+  email     String
+  phone     String?
+  github    String?
+  linkedin  String?
+  instagram String?
+  avatarUrl String?
+  skills    Json?    // JSON object for skills
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
