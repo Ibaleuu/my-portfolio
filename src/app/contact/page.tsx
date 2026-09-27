@@ -99,11 +99,11 @@ export default function ContactPage() {
                   <div className="w-12 h-12 rounded-2xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center text-[var(--accent)] shrink-0">
                     <Mail size={22} />
                   </div>
-                  <div>
+                  <div className="min-w-0 overflow-hidden">
                     <p className="text-xs text-[var(--text-muted)] font-mono">
                       Email
                     </p>
-                    <p className="text-sm font-medium text-white">
+                    <p className="text-sm font-medium text-white break-all">
                       muhammadiqbal06112004@gmail.com
                     </p>
                   </div>
@@ -112,11 +112,11 @@ export default function ContactPage() {
                   <div className="w-12 h-12 rounded-2xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center text-[var(--accent)] shrink-0">
                     <Phone size={22} />
                   </div>
-                  <div>
+                  <div className="min-w-0 overflow-hidden">
                     <p className="text-xs text-[var(--text-muted)] font-mono">
                       Phone
                     </p>
-                    <p className="text-sm font-medium text-white">
+                    <p className="text-sm font-medium text-white break-all">
                       +62 878-4218-9241
                     </p>
                   </div>
@@ -125,7 +125,7 @@ export default function ContactPage() {
                   <div className="w-12 h-12 rounded-2xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center text-[var(--accent)] shrink-0">
                     <MapPin size={22} />
                   </div>
-                  <div>
+                  <div className="min-w-0 overflow-hidden">
                     <p className="text-xs text-[var(--text-muted)] font-mono">
                       Location
                     </p>
